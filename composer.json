@@ -7,7 +7,7 @@
 	"license": "MIT",
 	"autoload": {
 		"psr-4": {
-			"Netnak\\Phpinify\\": "src"
+			"Netnak\\CloudBurst\\": "src"
 		}
 	},
 	"extra": {
