@@ -1,0 +1,24 @@
+{
+	"name": "netnak/cloudburst",
+	"require": {
+		
+		"statamic/cms": "^4.0 || ^5.0"
+	},
+	"license": "MIT",
+	"autoload": {
+		"psr-4": {
+			"Netnak\\Phpinify\\": "src"
+		}
+	},
+	"extra": {
+		"statamic": {
+			"name": "CloudBurst",
+			"description": "Provides a simple way to find a zone ID and purge cache for a domain using Cloudflare API."
+		},
+		"laravel": {
+			"providers": [
+				"Netnak\\CloudBurst\\ServiceProvider"
+			]
+		}
+	}
+}
