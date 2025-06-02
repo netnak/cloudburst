@@ -10,7 +10,6 @@
 - Automatically detects and stores your Cloudflare Zone ID  
 - Dashboard widget for quick access  
 - Configurable via `.env` or config file
-- allows multi domain cache busting
 
 ---
 
@@ -45,13 +44,13 @@ To manually turn it off you can use the setting in the config
 
 ## ✅ Usage
 
-This addon *requires* a CloudFlare API token. It will need read access to the cloudflare API zone resources and purge access to cache purge.
+This addon *requires* a CloudFlare API token. It will need read access to  zone resources and purge access to cache purge for your account.
 These env variables override defaults in `config/cloudburst.php`:
 
 ```env
 
 CLOUDBURST_ACCESS_KEY=your_cloudflare_access_key
-CLOUDBURST_OVERRIDE_DOMAIN=yourdomain.com # optional override or CSV yourdomain.com,yourotherdomain.com
+CLOUDBURST_OVERRIDE_DOMAIN=yourdomain.com # optional override
 
 ```
 Or edit config/cloudburst.php directly.

@@ -160,7 +160,7 @@
                     }
                 } catch (error) {
                     console.error('Cloudburst clear settings error:', error);
-                    this.showStatus('error', 'Network error occurred. Please try again.');
+                    this.showStatus('error', error.message || 'Network error occurred. Please try again.');
                 } finally {
                     this.setButtonLoading(button, false);
                 }
@@ -190,7 +190,7 @@
                     }
                 } catch (error) {
                     console.error('Cloudburst error:', error);
-                    this.showStatus('error', 'Network error occurred. Please try again.');
+                    this.showStatus('error', error.message || 'Network error occurred. Please try again.');
                 } finally {
                     this.setButtonLoading(button, false);
                 }
@@ -205,10 +205,6 @@
                         'X-Requested-With': 'XMLHttpRequest'
                     }
                 });
-
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
 
                 return await response.json();
             },
