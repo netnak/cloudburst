@@ -25,7 +25,7 @@ class CloudFlareWrapper
         $this->endpoint = rtrim($endpoint, '/') . '/';
 
         $access_key = $access_key ?? config('cloudburst.access_key');
-        dd($access_key);
+     
         if (!$access_key) {
             throw new \InvalidArgumentException("Cloudflare API token missing.");
         } else {
@@ -111,6 +111,8 @@ class CloudFlareWrapper
                 'DELETE' => $http->delete($url, $data),
                 default  => throw new \InvalidArgumentException("Unsupported HTTP verb: $verb"),
             };
+
+            //dd($response->body());
 
             $this->last_response = [
                 'status' => $response->status(),

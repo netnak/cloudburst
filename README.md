@@ -44,8 +44,8 @@ To manually turn it off you can use the setting in the config
 
 ## ✅ Usage
 
-
-These values toggle options in `config/cloudburst.php`:
+This addon *requires* a CloudFlare API token. It will need read access to  zone resources and purge access to cache purge for your account.
+These env variables override defaults in `config/cloudburst.php`:
 
 ```env
 
