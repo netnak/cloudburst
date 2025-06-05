@@ -39,7 +39,7 @@ To manually turn it off you can use the setting in the config
 
 ```php
 'show_widget' => false
-'''
+```
 
 ---
 
